@@ -107,3 +107,16 @@ Join the Nx community:
 - [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [YouTube](https://www.youtube.com/@nxdevtools)
 - [Blog](https://nx.dev/blog)
+
+
+
+-------
+
+
+nx g @nx/js:library shared-proto --directory=packages/shared-proto --buildable
+
+install grpc e Protoc Tools
+
+npm install --save-dev ts-proto protoc-gen-ts
+
+npm install @grpc/grpc-js @grpc/proto-loader 
