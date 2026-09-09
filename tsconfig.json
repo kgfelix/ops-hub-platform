@@ -5,6 +5,12 @@
   "references": [
     {
       "path": "./packages/shared-proto"
+    },
+    {
+      "path": "./apps/api-gateway-service-e2e"
+    },
+    {
+      "path": "./apps/api-gateway-service"
     }
   ],
   "compilerOptions": {}

@@ -1,0 +1,18 @@
+syntaxe = "proto3";
+
+package company;
+
+service CompanyService{
+    rpc CreateCompany (CreateCompanyRequest) returns (CreateCompanyResponse) {}
+}
+
+message CreateCompanyRequest {
+    int32 companyId = 1;
+    string companyName = 2;
+}
+
+message CreateCompanyResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 id = 3;
+}

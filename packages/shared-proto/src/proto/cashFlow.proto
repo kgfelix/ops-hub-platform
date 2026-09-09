@@ -1,0 +1,84 @@
+syntaxe = "proto3";
+
+import "google.protobuf/timestamp.proto";
+
+package cashFlow;
+
+service CashFlowService{
+    rpc CreateCategory (CreateCategoryRequest) returns (CreateCategoryResponse) {}
+    rpc CreateAccountType (CreateAccountTypeRequest) returns (CreateAccountTypeResponse) {}
+    rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse) {}
+    rpc CreateInflow (CreateInflowRequest) returns (CreateInflowResponse) {}
+    rpc CreateOutflow (CreateOutflowRequest) returns (CreateOutflowResponse) {}
+}
+
+message CreateCategoryRequest {
+    string name = 1;
+}
+
+message CreateCategoryResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 id = 3;
+}
+
+message CreateAccountTypeRequest {
+    string name = 1;
+}
+
+message CreateAccountTypeResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 id = 3;
+}
+
+message CreateAccounteRequest {
+    string name = 1;
+    int32 accountTypeId = 9;
+}
+
+message CreateAccountResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 id = 3;
+}
+
+message CreateInflowRequest {
+    string description = 1;
+    double value = 2;
+    google.protobuf.Timestamp event_date = 3;
+    google.protobuf.Timestamp created_at = 4;
+    google.protobuf.Timestamp modified on = 5;
+    bool is_paid = 6;
+    is_recurring = 7;
+    string comments = 8;
+    int32 categoryId = 9;
+    int32 accountId = 10;
+    int32 companyId = 11;
+}
+
+message CreateInflowResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 id = 3;
+}
+
+message CreateOutflowRequest {
+    string description = 1;
+    double value = 2;
+    google.protobuf.Timestamp event_date = 3;
+    google.protobuf.Timestamp created_at = 4;
+    google.protobuf.Timestamp modified on = 5;
+    bool is_paid = 6;
+    is_recurring = 7;
+    string comments = 8;
+    int32 categoryId = 9;
+    int32 accountId = 10;
+    int32 companyId = 11;
+}
+
+message CreateOutflowResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 id = 3;
+}

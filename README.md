@@ -120,3 +120,12 @@ install grpc e Protoc Tools
 npm install --save-dev ts-proto protoc-gen-ts
 
 npm install @grpc/grpc-js @grpc/proto-loader 
+
+
+create app
+
+npx nx g @nx/nest:application --name=api-gateway-service --directory=apps/api-gateway-service
+
+ NX   👀 View Details of api-gateway-service
+
+Run "nx show project api-gateway-service" to view details about this project.
