@@ -1,2 +1,2 @@
 def hello() -> str:
-    return "Hello from shared-proto!"
+    return "Hello from shared_proto!"

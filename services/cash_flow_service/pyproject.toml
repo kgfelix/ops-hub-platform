@@ -1,10 +1,16 @@
 [project]
-name = "shared_proto"
+name = "cash-flow-service"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "Kleber Felix", email = "kleber@purespectrum.com" }
+]
 requires-python = ">=3.14"
-dependencies = ["shared_proto"]
+dependencies = []
+
+[project.scripts]
+cash-flow-service = "cash_flow_service:main"
 
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
