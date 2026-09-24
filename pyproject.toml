@@ -1,0 +1,16 @@
+[project]
+name = "ops-hub-platform"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "grpcio-tools>=1.84.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "packages/*",
+    "services/*",
+]
